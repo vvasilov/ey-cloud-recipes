@@ -3,6 +3,9 @@
 #    echo "i ran at #{Time.now}" >> /root/cheftime
 #  }
 #end
+#
+
+require_recipe "delayed_job"
 
 # uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
 # require_recipe "sphinx"
