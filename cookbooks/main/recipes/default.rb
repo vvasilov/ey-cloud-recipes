@@ -7,6 +7,8 @@
 
 require_recipe "delayed_job"
 
+include_recipe "timezone"
+
 # uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
 # require_recipe "sphinx"
 
