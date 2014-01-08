@@ -5,7 +5,7 @@ node[:applications].each do |app_name, data|
     when "solo", "app", "app_master"
 
       worker_name  = "#{app_name}_job_runner" #safer to make this "#{app_name}_job_runner" if the environment might run multiple apps using delayed_job
-      worker_count = 2
+      worker_count = 1
       
       worker_count.times do |count|
         template "/etc/monit.d/delayed_job#{count+1}.#{app_name}.monitrc" do
