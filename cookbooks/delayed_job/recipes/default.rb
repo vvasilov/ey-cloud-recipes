@@ -2,9 +2,9 @@ node[:applications].each do |app_name, data|
   user = node[:users].first
 
   case node[:instance_role]
-    when "solo", "app", "app_master"
+    when "util" #run DJ only on the util. instance - not to effect web-app responsivenes
 
-      worker_name  = "#{app_name}_job_runner" #safer to make this "#{app_name}_job_runner" if the environment might run multiple apps using delayed_job
+      worker_name  = "#{app_name}_job_runner" #for multiple apps using delayed_job on same env.
       worker_count = 1
       
       worker_count.times do |count|
