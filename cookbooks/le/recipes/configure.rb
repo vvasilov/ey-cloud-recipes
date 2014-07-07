@@ -13,7 +13,6 @@ follow_paths = [
   "/var/log/syslog",
   "/var/log/auth.log",
   "/var/log/daemon.log",
-  "/var/log/nginx/#{app_name}.access.log"
 ]
 (node[:applications] || []).each do |app_name, app_info|
   follow_paths << "/var/log/nginx/#{app_name}.access.log"
