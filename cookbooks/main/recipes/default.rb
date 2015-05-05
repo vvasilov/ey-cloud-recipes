@@ -12,6 +12,9 @@ require_recipe 'le'
 
 include_recipe "mime_types"
 
+# uncomment to include the Postgres Maintenance recipe
+include_recipe "postgresql_maintenance"
+
 # uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
 # require_recipe "sphinx"
 
